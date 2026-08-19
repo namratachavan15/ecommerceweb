@@ -61,6 +61,7 @@ public class AppConfig {
                 CorsConfiguration cfg = new CorsConfiguration();
                 cfg.setAllowedOrigins(Arrays.asList(
                         "http://localhost:3000",
+
                         "https://stormsofts-ecommerce.vercel.app"
                 ));
                 cfg.setAllowedMethods(Collections.singletonList("*"));
