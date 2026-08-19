@@ -1,0 +1,12 @@
+.productCard .textPart{
+  transition: transform .3s ease-out;
+}
+
+.productCard:hover .productImg
+{
+    transform: scale(1.06);
+}
+.productCard:hover{
+     box-shadow: 0 0 0 1px rgba(79,124,255,0.35), 0 20px 40px -18px rgba(79,124,255,0.35);
+     transform: translateY(-4px);
+}
