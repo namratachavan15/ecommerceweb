@@ -2,6 +2,8 @@
 <img width="1920" height="2431" alt="productDetails" src="https://github.com/user-attachments/assets/0c1faaa0-c6c4-454b-9946-a5930138df4d" />
 <img width="1920" height="1559" alt="Cart" src="https://github.com/user-attachments/assets/34813075-bed4-4c0c-8283-a73c44c278b7" />
 <img width="1920" height="1559" alt="checkout" src="https://github.com/user-attachments/assets/66dd47b9-ba7a-49a5-b8e5-ce95acc27e8c" />
+<img width="1920" height="1559" alt="screencapture-localhost-3000-payment-22-2026-08-19-07_53_38" src="https://github.com/user-attachments/assets/6427bd6d-7740-4ef9-bc42-cae020666755" />
+
 <img width="1920" height="1559" alt="search-results" src="https://github.com/user-attachments/assets/710dfca6-837d-4d55-98f1-f57b45055766" />
 <img width="1920" height="1491" alt="admin-dashboard" src="https://github.com/user-attachments/assets/8ca93b93-9757-47a3-b4bc-66964e6b5efe" />
 <img width="1920" height="1802" alt="admin-product-create" src="https://github.com/user-attachments/assets/ba78a418-7344-4d9f-b739-026df918178e" />
