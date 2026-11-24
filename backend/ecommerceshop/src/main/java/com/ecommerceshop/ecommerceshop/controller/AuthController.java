@@ -1,5 +1,4 @@
-package com.ecommerceshop.ecommerceshop.controller;
-
+package com.ecommerceshop.ecommerceshop.controller;    
 import com.ecommerceshop.ecommerceshop.config.JwtProvider;
 import com.ecommerceshop.ecommerceshop.model.Cart;
 import com.ecommerceshop.ecommerceshop.model.User;
@@ -93,26 +92,24 @@ public class AuthController {
         );
     }
 
-    @PostMapping("/signin")
-    public ResponseEntity<AuthResponse> signin(@RequestBody LoginRequest request) {
-        String username = request.getEmail();
-        String password = request.getPassword();
-
-        Authentication authentication = authenticate(username, password);
+   @PostMapping("/signin")
+public ResponseEntity<?> signin(@RequestBody LoginRequest request) {
+    try {
+        Authentication authentication = authenticate(request.getEmail(), request.getPassword());
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         String jwt = jwtProvider.generateToken(authentication);
-
-        User user = userRepo.findByEmail(username); // ✅ fetch user from DB
+        User user = userRepo.findByEmail(request.getEmail());
 
         AuthResponse authResponse = new AuthResponse();
         authResponse.setJwt(jwt);
         authResponse.setMessage("Login success");
-        authResponse.setRole(user.getRole());  // ✅ add role to response
-        System.out.println("logined user role is"+user.getRole());
+        authResponse.setRole(user.getRole());
         return new ResponseEntity<>(authResponse, HttpStatus.OK);
+    } catch (AuthenticationException e) {
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
     }
-
+}
 
     private Authentication authenticate(String username, String password) {
 
